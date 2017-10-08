@@ -3,5 +3,19 @@
 import PackageDescription
 
 let package = Package(
-    name: "ShellOut"
+    name: "ShellOut",
+    products: [
+        .library(
+            name: "ShellOut",
+            targets: ["ShellOut"]),
+    ],
+    dependencies: [],
+    targets: [
+        .target(
+            name: "ShellOut",
+            dependencies: []),
+        .testTarget(
+            name: "ShellOutTests",
+            dependencies: ["ShellOut"])
+    ]
 )
